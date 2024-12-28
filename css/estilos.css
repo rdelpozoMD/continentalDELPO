@@ -1,0 +1,53 @@
+body {
+    /* background-image: url('https://i.ytimg.com/vi/8SnPOl1eiGs/maxresdefault.jpg'); */
+    background-image: url('../imgs/fondo2.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+#home, #addPlayers, #game{
+   margin-top: 50px;
+   border-radius: 12px;
+   background-color: rgb(179, 212, 224);
+   padding: 30px;
+}
+.participantes{
+    margin: 3px;
+}
+.d-none {
+    display: none !important;
+}
+
+.btn {
+    border-radius: 50px;
+}
+
+.list-group-item {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#descWeb{
+    margin: 0;
+}
+
+.btn-link{
+    margin-bottom: 50px;
+}
+
+#startGame{
+    width: 300px;
+    font-size: 28px;
+}

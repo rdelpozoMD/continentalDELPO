@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental DELPO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/66e96f082f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- INICIO -->
+    <div id="home" class="container text-center d-flex justify-content-center align-items-center vh-80">
+        <div>
+            <h1>CONTINENTAL DELPO</h1>
+            <p id="descWeb">Para poder organizar y contabilizar las puntuaciones de la partida.</p>
+            <a href="reglas.html" class="btn btn-link mt-1">¿Cómo se juega?</a><br>
+            <button id="startGame" class="btn btn-primary btn-lg">JUGAR</button>
+        </div>
+    </div>
+
+    <!-- AGREGAR PARTICIPANTES -->
+    <div id="addPlayers" class="container mt-5 d-none">
+        <h2>Agregar Participantes</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="playerName" class="form-control" placeholder="Nombre del participante">
+            <button id="addPlayer" class="btn btn-success">Añadir</button>
+        </div>
+        <ul id="playerList" class="list-group"></ul>
+        <div style="display: flex; justify-content: center;">
+            <button id="startRound" class="btn btn-primary mt-3" disabled>Empezar Partida</button>
+        </div>
+    </div>
+
+    <!-- JUEGO EN PROGRESO -->
+    <div id="game" class="container mt-5 d-none">
+        <h1 style="text-align: center;">Ronda <span id="currentRound">1</span><br> <span id="roundObjective">6 cartas: <b>2 tríos</b></span></h1>
+        <div id="scoreBoard" class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Participante</th>
+                        <th class="text-center">Puntos</th>
+                        <th class="text-center">Añadir Puntos</th>
+                    </tr>
+                </thead>
+                <tbody id="playerScores"></tbody>
+            </table>
+        </div>
+        <button id="nextRound" class="btn btn-primary mt-3">Pasar de Ronda</button>
+        <button id="endGame" class="btn btn-danger mt-3">Finalizar Partida</button>
+    </div>
+
+    <div id="podium" class="d-none">
+        <div id="top3" class="row" style="display: flex; justify-content: center; margin-top: 20px;"></div>
+        <ul id="restOfPlayers" class="list-group mt-3" style="display: flex; justify-content: center; margin-top: 20px; margin: 0 auto; max-width: 80%; background-color: rgb(179, 212, 224); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></ul>
+        <div style="display:flex; justify-content: center; padding: 20px;">
+            <button id="restartGame" class="btn btn-primary mt-3" >Volver al inicio</button>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
